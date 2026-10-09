@@ -1,4 +1,4 @@
-```python
+
 import streamlit as st
 import joblib
 
@@ -57,4 +57,4 @@ if st.button("Check Email", type="primary"):
             "This is a machine-learning estimate, not a guarantee. "
             "Review suspicious emails carefully."
         )
-```
+
