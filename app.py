@@ -21,11 +21,9 @@ st.write("Check whether an email is likely to be spam or legitimate.")
 
 try:
     model, preprocessor = load_artifacts()
-except Exception:
-    st.error(
-        "Model files not found. Keep spam_email_model.pkl and "
-        "spam_email_preprocessor.pkl in the same folder as app.py."
-    )
+except Exception as e:
+    st.error("Failed to load model files.")
+    st.exception(e)
     st.stop()
 
 subject = st.text_input("Email subject")
